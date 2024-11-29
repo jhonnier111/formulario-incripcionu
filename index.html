@@ -362,10 +362,13 @@
       esValido = false;
     }
 
-    // Si hay errores, cancelar el envío
-    if (!esValido) {
-      event.preventDefault(); // Evitar que el formulario se envíe
-    }
+        // Si todo está bien (esValido es verdadero), redirigir a la página de confirmación
+        if (esValido) {
+            event.preventDefault();  // Evitar que el formulario se envíe de forma convencional
+            window.location.href = 'confirmacion.html';  // Redirigir a confirmacion.html
+        }
+    });
+</script>
   });
 </script>
 </html>

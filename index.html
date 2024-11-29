@@ -313,6 +313,20 @@
             <button type="submit">Enviar Formulario</button>
         </div>
     </form>
+    <script>
+        function redirigirAConfirmacion() {
+            // Evitar que el formulario se envíe de inmediato
+            event.preventDefault();
+
+            // Redirigir a la página de confirmación
+            window.location.href = 'confirmacion.html';
+
+            return false; // Prevenir el envío del formulario
+        }
+    </script>
+
+</body>
+</html>
 </body>
     <script>
   // Obtener el formulario
@@ -356,18 +370,6 @@
 </script>
 </html>
 
-
-    <script>
-        function redirigirAConfirmacion() {
-            // Evitar que el formulario se envíe de inmediato
-            event.preventDefault();
-
-            // Redirigir a la página de confirmación
-            window.location.href = 'confirmacion.html';
-
-            return false; // Prevenir el envío del formulario
-        }
-    </script>
 
 </body>
 </html>

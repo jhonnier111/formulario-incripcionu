@@ -314,16 +314,15 @@
         </div>
     </form>
     <script>
-        function redirigirAConfirmacion() {
-            // Evitar que el formulario se envíe de inmediato
-            event.preventDefault();
+    // Obtener el formulario
+    const formulario = document.querySelector('form');
 
-            // Redirigir a la página de confirmación
-            window.location.href = 'confirmacion.html';
-
-            return false; // Prevenir el envío del formulario
-        }
-    </script>
+    // Agregar evento al botón de envío
+    formulario.addEventListener('submit', function (event) {
+        event.preventDefault();  // Evitar que el formulario se envíe de forma convencional
+        window.location.href = 'confirmacion.html';  // Redirigir a confirmacion.html
+    });
+</script>
 
 </body>
 </html>
@@ -360,15 +359,7 @@
     if (telefono !== '' && !/^\d{10}$/.test(telefono)) {
       document.getElementById('error-telefono').textContent = 'El teléfono debe tener 10 dígitos.';
       esValido = false;
-    }
-
-        // Si todo está bien (esValido es verdadero), redirigir a la página de confirmación
-        if (esValido) {
-            event.preventDefault();  // Evitar que el formulario se envíe de forma convencional
-            window.location.href = 'formularioinscripcionu/confirmacion.html';  // Redirigir a confirmacion.html
-        }
-    });
-</script>
+    
 </script>
 </html>
 

@@ -342,43 +342,7 @@
   </script>
 
 </body>
-</html>
-</body>
-    <script>
-  // Obtener el formulario
-  const formulario = document.querySelector('form');
 
-  // Agregar evento al botón de envío
-  formulario.addEventListener('submit', function (event) {
-    let esValido = true; // Bandera para verificar si todo está correcto
-
-    // Limpiar mensajes de error previos
-    const errores = document.querySelectorAll('.error');
-    errores.forEach(error => error.textContent = '');
-
-    // Validar campos
-    // Nombre (obligatorio)
-    const nombre = document.getElementById('nombre').value.trim();
-    if (nombre === '') {
-      document.getElementById('error-nombre').textContent = 'El nombre es obligatorio.';
-      esValido = false;
-    }
-
-    // Correo (debe contener @)
-    const email = document.getElementById('email').value.trim();
-    if (!email.includes('@')) {
-      document.getElementById('error-email').textContent = 'Debe ingresar un correo válido.';
-      esValido = false;
-    }
-
-    // Teléfono (si se ingresa, debe ser de 10 dígitos)
-    const telefono = document.getElementById('telefono').value.trim();
-    if (telefono !== '' && !/^\d{10}$/.test(telefono)) {
-      document.getElementById('error-telefono').textContent = 'El teléfono debe tener 10 dígitos.';
-      esValido = false;
-    
-</script>
-</html>
 
 
 </body>

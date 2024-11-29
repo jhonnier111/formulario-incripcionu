@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Inscripción a Carrera</title>
@@ -313,16 +315,31 @@
             <button type="submit">Enviar Formulario</button>
         </div>
     </form>
-    <script>
-    // Obtener el formulario
-    const formulario = document.querySelector('form');
+  <!-- Mensaje de éxito -->
+  <div id="successMessage" style="display:none; color: orange; text-align: center;">
+    ¡Formulario enviado exitosamente! Gracias por tu mensaje.
+  </div>
 
-    // Agregar evento al botón de envío
-    formulario.addEventListener('submit', function (event) {
-        event.preventDefault();  // Evitar que el formulario se envíe de forma convencional
-        window.location.href = 'confirmacion.html';  // Redirigir a confirmacion.html
+  <script>
+    // Inicializa EmailJS con tu User ID
+    (function() {
+      emailjs.init("service_5tdhifz");  
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();  // Evita el envío tradicional del formulario
+
+      // Envía el formulario con EmailJS
+      emailjs.sendForm('service_5tdhifz', 'templateqxpcqbb', this)
+        .then(function(response) {
+          console.log('SUCCESS', response);  // Verifica la respuesta en consola
+          // Mostrar mensaje de éxito
+          document.getElementById("successMessage").style.display = 'block';
+        }, function(error) {
+          console.log('FAILED', error);  // Maneja cualquier error aquí
+        });
     });
-</script>
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción a Carrera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #e67e22;
+            text-align: center;
+        }
+        h2 {
+            font-size: 22px;
+            color: #e67e22;
+            margin-top: 20px;
+        }
+        form {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .required::after {
+            content: " *";
+            color: red;
+        }
+        .hint {
+            font-size: 12px;
+            color: #888;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #d35400;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Inscripción a Carrera</h1>
+    <form id="registrationForm">
+        <!-- Selección de Carrera -->
+        <h2>¿En que carrera desea incribirse?</h2>
+           <div class="form-group">
+            <label for="career" class="required">Seleccione su carrera</label>
+            <select id="career" name="career" required>
+                <option value="">Seleccione...</option>
+                <option value="administracion">Administración de Empresas</option>
+                <option value="bacteriologia">Bacteriología</option>
+                <option value="contaduria">Contaduría Pública</option 
+>
+                <option value="derecho">Derecho</option>
+                <option value="enfermeria">Enfermería</option>
+                <option value="ingenieria">Ingeniería de Sistemas</option>
+                <option value="instrumentacion">Instrumentación Quirúrgica | Cartagena</option>
+                <option value="educacion">Licenciatura en Educación Infantil</option>
+                <option value="medicina">Medicina</option>
+                <option value="odontologia">Odontología</option>
+                <option value="prehospitalaria">Tecnología en Atención Prehospitalaria</option>
+                <option value="estetica">Tecnología en Estética y cosmetodologia </option>
+                <option value="dental">Tecnología en Mecánica Dental</option>
+                <option value="trabajo">Trabajo Social</option>
+            </select>
+        </div>
+
+        <!-- Información Personal -->
+        <h2>Información Personal</h2>
+        <div class="form-group">
+            <label for="firstName" class="required">Primer Nombre</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Ejemplo: Juan" required>
+        </div>
+         <div class="form-group">
+            <label for="firstName" class="optional">Segundo Nombre</label>
+            <input type="text" id="secondName" name="secondName" placeholder="Ejemplo: David">
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="required">Primer Apellido</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Ejemplo: Pérez" required>
+        </div>  
+          <div class="form-group">
+            <label for="lastName" class="required">Segundo Apellido</label>
+            <input type="text" id="second last name" name="second last name" placeholder="Ejemplo: Marrugo" required>
+        </div>  
+        
+           <div class="form-group">
+            <label for="birthDate" class="required">Fecha de Nacimiento</label>
+            <input type="date" id="birthDate" name="birthDate" required>  
+            
+        </div>
+        <div class="form-group">
+            <label for="documentType" class="required">Tipo de Documento</label>
+            <select id="documentType" name="documentType" required>
+                <option value="">Seleccione...</option>
+                <option value="cc">Cédula de Ciudadanía</option>
+                <option value="ce">Cédula de Extranjería</option>
+                <option value="passport">Tarjeta de identidad</option>
+                <option value="cc">Pasaporte</option>
+
+            </select>
+        <div class="form-group">
+            <label for="documentNumber" class="required">Número de Documento</label>
+            <input type="text" id="documentNumber" name="documentNumber" placeholder="Ejemplo: 123456789" required>
+
+        </div>
+        <div class="form-group">
+            <label for="gender" class="required">Sexo Biológico</label>
+            <select id="gender" name="gender" required></div>
+                <option value="">Seleccione...</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="civilStatus" class="required">Estado Civil</label>
+            <select id="civilStatus" name="civilStatus" required>
+                <option value="">Seleccione...</option>
+                <option value="single">Soltero/a</option>
+                <option value="married">Casado/a</option>
+                <option value="unionFree">Unión Libre</option>
+                <option value="divorced">Divorciado/a</option>
+                <option value="widow">Viudo/a</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="email" class="required">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Ejemplo: correo@dominio.com" required>
+        </div>
+            </div>
+        <div class="form-group">
+            <label for="phone" class="required">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ejemplo: 3001234567" pattern="[0-9]{10}" required>
+            <div class="hint">Debe contener 10 dígitos.</div>
+        </div>
+
+        </div>  
+  </div>   
+</div> 
+
+
+   <!-- Dirección -->
+        <h2>Dirección Residencial</h2>
+
+         <div class="form-group">
+            <label for="addressCountry" class="required">País de Residencia</label>
+            <input type="text" id="addressCountry" name="addressCountry" placeholder="Ejemplo: Colombia" required>
+        </div>
+        <div class="form-group">
+            <label for="addressCity" class="required">Ciudad de Residencia</label>
+            <input type="text" id="addressCity" name="addressCity" placeholder="Ejemplo: Bogotá" required>
+        </div>
+        <div class="form-group">
+            <label for="addressDetail" class="required">Dirección</label>
+            <input type="text" id="addressDetail" name="addressDetail" placeholder="Ejemplo: Calle 123 #45-67" required>
+        </div>
+
+         <!-- Encuesta Personal -->
+        <h2>Encuesta Personal *</h2>
+        <label for="children">¿Tiene hijos? *</label>
+        <select id="children" required>
+            <option value="">Seleccione una opción</option>
+            <option>No tengo</option>
+            <option>1 hijo</option>
+            <option>2 hijos</option>
+            <option>3 hijos</option>
+            <option>4 hijos</option>
+            <option>Mas de 4 hijos</option>
+            </select>
+            
+        </div> 
+           </div>
+        <div class="form-group">
+            <label for="population" class="required">¿Se reconoce como parte de alguna de las siguientes poblaciones etnicas?</label>
+            <select id="population" name="population" required>
+                <option value="">Seleccione...</option>
+                <option value="afrodescendant">Afrodescendiente</option>
+                <option value="indigenous">Indígena</option>
+                <option value="raizal">Raizal</option>
+                <option value="palenquero">Palenquero</option>
+                <option value="rom">Pueblo ROM</option>
+                <option value="none">Ninguna</option>
+            </select>
+        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Discapacidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #campo-especificar {
+            display: none; /* Oculta inicialmente el campo de texto */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="disability" class="required">¿Cuenta con alguna discapacidad?</label>
+            <select id="disability" name="disability" required onchange="mostrarCampoEspecificar()">
+                <option value="">Seleccione...</option>
+                <option value="ninguna">Ninguna</option>
+                <option value="motriz">Discapacidad Motriz</option>
+                <option value="sorda">Discapacidad Sorda</option>
+                <option value="cognitiva">Discapacidad Cognitiva</option>
+                <option value="sordoceguera">Sordoceguera</option>
+                <option value="voz-habla">Trastornos de la voz y el habla</option>
+                <option value="otra">Otra discapacidad</option>
+            </select>
+        </div>
+
+        <!-- Campo adicional para "Otra discapacidad" -->
+        <div id="campo-especificar" class="form-group">
+            <label for="especificar">Diga cual es su otra discapacidad:</label>
+            <input type="text" id="especificar" name="especificar" placeholder="Escriba su discapacidad">
+        </div>
+
+   
+
+    <script>
+        // Función para mostrar u ocultar el campo adicional
+        function mostrarCampoEspecificar() {
+            const seleccion = document.getElementById("disability").value;
+            const campoEspecificar = document.getElementById("campo-especificar");
+
+            // Mostrar el campo si selecciona "Otra discapacidad"
+            if (seleccion === "otra") {
+                campoEspecificar.style.display = "block";
+            } else {
+                campoEspecificar.style.display = "none";
+                document.getElementById("especificar").value = ""; // Limpia el campo si estaba visible antes
+            }
+        }
+    </script>
+</body>    
+</html>
+
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="employmentStatus" class="required">¿Usted trabaja actualmente?</label>
+            <select id="employmentStatus" name="employmentStatus" required>
+                <option value="">Seleccione...</option>
+                <option value="employed">No estoy trabajando/a</option>
+                <option value="unemployed">Sí, empleado/a</option>
+                <option value="freelancer">Sí,independiente</option>
+            </select>
+        </div>
+
+        <!-- Botón de Envío -->
+        <div class="button-container">
+            <button type="submit">Enviar Formulario</button>
+        </div>
+    </form>
+</body>
+</html>
+
